@@ -1,19 +1,133 @@
 $font-stack: Helvetica, sans-serif;
+$logo-font-stack: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 $primary-color: #333;
+$orange-color: rgb(245, 115, 103); 
+$secondary-color: #E9E7E7;
 
 body {
-  font: 100% $font-stack;
+  font: 1em $font-stack;
   color: $primary-color;
 }
-nav {
-  ul {
-    .dropdown {
-        background-color: wheat;
-        padding-right: 30px !important;
-    }
-    li.active {
 
-    }
+.row {
+  margin: 0px;
+}
+
+nav {
+  background-color: $orange-color;
+  a {
+    color: white !important;
+  } 
+}
+
+a.dropdown-item {
+  color: $orange-color !important;
+}
+
+li {
+  list-style: none;
+}
+
+span.logo {
+  font-size: 1.7em;
+  font-family: $logo-font-stack;
+}
+
+.big.row {
+  font: .9em $font-stack;
+
+  .leftC{
+    background-color:white;
+    padding: 2em .7em; 
+    height: 100vh;
   }
   
+  .rightC{
+    background-color:lightgrey;
+  }
+  
+}
+
+input.form-control-lg {
+  font-size: 100%;
+  width: 100%; 
+  border-color: $secondary-color;
+  border-width: .1em;
+  height: 3em;
+}
+input::placeholder{
+  color: $secondary-color;
+}
+
+.info {
+  background-color: $secondary-color;
+  padding: .4em;
+  padding-bottom: .5em;
+  color: $orange-color;
+  margin-top: 1.7em;
+  border-radius: 3px;
+}
+
+.content {
+  background-color: white;
+  padding: 1em .4em;
+  font-size: 90%;
+  border-radius: 3px;
+}
+.content.jobs {
+  padding-bottom: .6em;
+}
+
+.options {
+  width: 150px;
+  margin-top: 3em;
+  margin-left: 1em;
+  position: absolute;
+  z-index: 2;
+}
+
+.t-left {
+  text-align: left;
+}
+
+.t-right {
+  text-align: right;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.dropdown-toggle::after {
+  display:none
+}
+
+@media (max-width: 768px) {
+  .info {
+    margin-top: .5em;
+    padding: .2em;
+    padding-bottom: .3em;
+  }
+  .big.row .leftC {
+    padding: .5em .5em; 
+  }
+  .search-form {
+    margin-top: .5em;
+  }
+  #second_map {
+    width: 100%;
+    height: 90vw;
+  }
+
+}
+
+.dropdown-toggle{
+  background-color: transparent;
+  border: none;
+}
+@media (max-width: 576px) {
+  .options {
+    width: 100px;
+    padding: 3vw !important;
+  }  
 }

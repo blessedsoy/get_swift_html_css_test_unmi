@@ -1,56 +1,171 @@
 <!DOCTYPE html>
 <html>
   <header>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>getswift</title>
   </header>
 
   <body>
+    
     <div id='container'>
-      <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">
-            <img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
-            getswift
-          </a>
 
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown link
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-              </li>
-            </ul>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <nav class="navbar navbar-expand-lg navbar-light p-0">
+
+        <a class="navbar-brand pt-0" href="#">
+          <img src="" width="30" height="30" class="d-inline-block align-top" alt="">
+          <span class="logo">getswift</span>
+        </a>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+
+          <ul class="navbar-nav">
+
+            <li class="nav-item active pr-3">
+              <a class="nav-link" href="#">+ ADD <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active pr-3">
+              <a class="nav-link" href="#">MAP <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active pr-3">
+              <a class="nav-link" href="#">REPORTS</a>
+            </li>          
+          </ul> 
+
+        </div>
+        
+        <div class="dropdown pr-3">
+          <button class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-bars fa-2x" aria-hidden="true" style='color: white'></i>
+          </button>
+          <div class="dropdown-menu" style="right:0; left: auto;" aria-labelledby="navbarDropdownMenuLink">
+            <div class="row">
+              <div class="d-none d-lg-block">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>                    
+              </div>
+              <div class="d-lg-none">
+                <a class="dropdown-item" href="#">+ ADD</a>
+                <a class="dropdown-item" href="#">MAP</a>
+                <a class="dropdown-item" href="#">REPORTS</a>
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>                                         
+              </div>
+            </div>
+          </div>
+        </div>          
+
+      </nav> 
+
+      <div class='big row'>
+
+        <div class='leftC col-md-4 col-xl-3'>
+
+          <div class="d-md-none">
+            <div class='info options p-3 t-center'>OPTIONS</div>
+            <div id="second_map" class="img-fluid" alt="Responsive image"></div>
           </div>
 
-          
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </nav>
-      </div>
-      <div>
-        <div>
+          <form class="search-form">
+            <input class="form-control-lg" type="text" placeholder="search" aria-label="Search">
+          </form>
+
+          <div class='info'>
+            <div class='m-2 t-center'>MENU</div>
+          </div>
+
+          <div class='info'>
+            <div class='m-2 pb-1 t-center'>
+                ALL DRIVERS (1)
+            </div>
+
+            <div class='content'> 
+
+              <div class="row">
+
+                <div class="col-2 p-0">
+                  <a href="https://placeholder.com"><img src="http://via.placeholder.com/30x30"></a>
+                </div>
+                <!-- col-2 -->
+                <div class="col-10 p-0">
+
+                  <div class="row">
+                    <div class="col-6 p-0 t-left"><strong>JOSH SMITH</strong></div>
+                    <div class="col-6 p-0 t-right"><strong>AVAILABLE IN</strong></div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-6 pl-0 t-left">1 jobs</div>
+                    <div class="col-6 pr-0 t-right">19 mins</div>
+                  </div>
+
+                </div>
+                <!-- col-10 -->
+              </div>
+              <!-- row -->
+            </div> 
+            <!-- content -->
+          </div>
+          <!-- info -->
+
+          <div class='info'>
+            
+            <div class='m-2 pb-1 t-center'>
+                ALL JOBS (1)
+            </div>
+
+            <div class='content jobs'>
+
+              <div class="d-flex justify-content-start">
+                <div class="pb-1">2244308</div><div class="ml-auto pb-1"><strong>EN ROUTE</strong></div>
+              </div>
+              <div class="d-flex align-items-start flex-column">
+                <div class="pb-1">NYC Warehouse</div>
+                <div class="pb-1"><strong>Jonathan Rosham</strong></div>    
+              </div>
+              <div class="d-flex justify-content-start">
+                <div class="p-0">Due 10 days ago</div><div class="ml-auto p-0"><strong><i class="fa fa-clock-o" style="font-size:1.5em" aria-hidden="true"></i></strong></div>
+              </div>
+
+            </div>
+            <!-- content jobs -->
+          </div>
+          <!-- info -->
+
         </div>
-        <div>
+        <!-- leftC -->
+
+        <div class='rightC col-md-8 col-xl-9 p-0 d-none d-md-block'>
+          <div class='info options p-3 t-center'>OPTIONS</div>
+          <div id="map" style="width:100%; height:100%" class="img-fluid" alt="Responsive image"></div>
         </div>
+        <!-- rightC  -->
+
       </div> 
-    </div><!--  // container -->
+      <!-- big row -->
+      
+    </div>
+    <!-- container -->
+
+
+    <!-- google map javascript -->
+    <script>
+      function myMap() {
+          var mapOptions = {
+              center: new google.maps.LatLng(40.7320547, -73.9906222),
+              zoom: 16,
+          }
+      var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+      var second_map = new google.maps.Map(document.getElementById("second_map"), mapOptions);
+    }  
+    </script>    
+    <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
   </body>
 <html>
