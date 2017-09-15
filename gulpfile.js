@@ -44,14 +44,5 @@ gulp.task('watch', function(gulpCallback){
     gulp.watch('src/scss/*.scss', ['styles']);
 });
 
-
-// Mnify CSS
-// gulp.task('minify-css', () => {
-//     return gulp.src('css/styles.css')
-//         .pipe(rename({suffix: ".min"}))
-//         .pipe(cleanCSS({compatibility: 'ie8'}))
-//         .pipe(gulp.dest('css'));
-// });
-
 // All tasks together
 gulp.task('default', ['styles', 'watch'])
